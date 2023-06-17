@@ -16,7 +16,7 @@ public final class UserDAO {
         ArrayList<User> result = new ArrayList<>();
 
         try (Connection conn = ConnectionHelper.getConnection();
-             PreparedStatement preparedStatement = conn.prepareStatement("SELECT * FROM public.\"Users\"")) {
+             PreparedStatement preparedStatement = conn.prepareStatement("SELECT * FROM public.\"User\"")) {
 
             ResultSet resultSet = preparedStatement.executeQuery();
 
