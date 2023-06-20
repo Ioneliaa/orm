@@ -27,21 +27,21 @@ public class FlowersService {
 
         ObjectMapper mapper = new ObjectMapper();
         try {
-            Flowers flowers = mapper.readValue(response, new TypeReference<>() {
+            Flowers flower = mapper.readValue(response, new TypeReference<>() {
             });
-            FlowersDAO.add(flowers);
+            FlowersDAO.add(flower);
         } catch (JsonProcessingException e) {
             throw new RuntimeException(e);
         }
     }
 
-    public void delete(int flowersId) {
-        if (flowersId < 0) {
+    public void delete(int flowerId) {
+        if (flowerId < 0) {
             return;
         }
 
         try {
-            FlowersDAO.delete(flowersId);
+            FlowersDAO.delete(flowerId);
         } catch (Exception e) {
             throw new RuntimeException(e);
         }

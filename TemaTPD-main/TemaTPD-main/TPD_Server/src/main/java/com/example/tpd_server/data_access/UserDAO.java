@@ -1,5 +1,6 @@
 package com.example.tpd_server.data_access;
 
+//import com.example.connection_package.ConnectionHelper;
 import com.example.tpd_server.models.User;
 
 import java.io.IOException;
@@ -16,7 +17,7 @@ public final class UserDAO {
         ArrayList<User> result = new ArrayList<>();
 
         try (Connection conn = ConnectionHelper.getConnection();
-             PreparedStatement preparedStatement = conn.prepareStatement("SELECT * FROM public.\"User\"")) {
+             PreparedStatement preparedStatement = conn.prepareStatement("SELECT * FROM public.\"Users\"")) {
 
             ResultSet resultSet = preparedStatement.executeQuery();
 

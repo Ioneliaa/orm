@@ -9,5 +9,5 @@ public interface FlowersInterface {
     String getName();
     void setName(String name);
     String getColor();
-    void SetColor(int SetColor);
+    void setColor(String SetColor);
 }

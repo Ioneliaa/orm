@@ -14,10 +14,11 @@ public class Flowers implements FlowersInterface, Serializable {
     public Flowers(){
 
     }
-    public Flowers(int id, String name, String color) {
+    public Flowers(int id, String title, String author) {
         this.id = id;
-        this.name = name;
-        this.color = color;
+        this.name = title;
+        this.color = author;
+
     }
 
     public int getId() {
@@ -28,24 +29,18 @@ public class Flowers implements FlowersInterface, Serializable {
         this.id = id;
     }
 
-    @Override
     public String getName() {
         return name;
     }
 
-    @Override
     public void setName(String name) {
-        this.name=name;
+        this.name = name;
     }
 
-    @Override
     public String getColor() {
         return color;
     }
-
-    @Override
-    public void SetColor(int SetColor) {
-
+    public void setColor(String color) {
+        this.color = color;
     }
-
 }

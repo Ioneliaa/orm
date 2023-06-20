@@ -37,13 +37,13 @@ public class UserFlowersService {
         }
     }
 
-    public void delete(int userId, int flowersId) {
-        if (userId < 0 || flowersId < 0) {
+    public void delete(int userId, int motorcycleId) {
+        if (userId < 0 || motorcycleId < 0) {
             return;
         }
 
         try {
-            UserFlowersDAO.delete(userId, flowersId);
+            UserFlowersDAO.delete(userId, motorcycleId);
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
